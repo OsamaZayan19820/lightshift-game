@@ -31,8 +31,8 @@ npm test
 ## نشر مجاني على GitHub Pages (بعد قرار بالنشر)
 1. افتح مستودع GitHub عامًا جديدًا خاصًا باللعبة فقط. لا ترفع أسرارًا أو بيانات خاصة.
 2. ارفع جميع الملفات من جذر هذا المشروع، بما فيها index.html وengine.mjs وsw.js وicons.
-3. من Settings → Pages اختر Deploy from a branch ثم main و/(root).
-4. افتح الرابط المنشور على هاتف iPhone في Safari ثم Share → Add to Home Screen؛ على Android استخدم خيارات التثبيت من المتصفح المدعوم.
+3. من Settings → Pages، ضمن **Build and deployment** اختر **Source: GitHub Actions** (لا تختر Deploy from a branch)، ثم احفظ الإعداد.
+4. بعد تفعيل Pages شغّل workflow من تبويب Actions → Test and deploy LIGHTSHIFT → Run workflow، ثم افتح الرابط المنشور على هاتف iPhone في Safari ثم Share → Add to Home Screen؛ على Android استخدم خيارات التثبيت من المتصفح المدعوم.
 5. تأكد من أن الرابط يعمل عبر HTTPS وأن اللعبة تعمل دون اتصال بعد زيارتها وتحميل ملفاتها مرة واحدة.
 
 تنبيه: GitHub Pages بالخطة المجانية يتطلب مستودعًا عامًا وقد يكشف شفرة اللعبة للجمهور. لتبقي الشفرة خاصة استخدم استضافة مناسبة بعد مراجعة شروطها.
