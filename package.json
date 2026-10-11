@@ -1,0 +1,11 @@
+{
+  "name": "lightshift-pwa",
+  "version": "0.2.0",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/prepare-pages.mjs"
+  }
+}

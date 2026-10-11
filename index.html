@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111c36">
+  <meta name="description" content="LIGHTSHIFT: أعد النور إلى مدينة صغيرة عبر تدوير المسارات. لعبة ألغاز أصلية مجانية.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="LIGHTSHIFT">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>LIGHTSHIFT — City of Light</title>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<main class="app">
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="LIGHTSHIFT home"><span class="brandicon">✦</span><span>LIGHT<span class="light">SHIFT</span><small>مدينة الضوء</small></span></a>
+    <div class="header-actions">
+      <button id="lang" class="small pill" aria-label="Switch language">EN</button>
+      <button id="sound" class="small pill" aria-label="Sound on off">♫</button>
+    </div>
+  </header>
+  <section class="hero">
+    <p id="eyebrow" class="eyebrow">لغز واحد. مدينة تستيقظ.</p>
+    <h1 id="headline">أعِد النور إلى المدينة</h1>
+    <p id="subtitle" class="subtitle">المس طريقًا لتدويره. أوصل الطاقة إلى كل المنازل.</p>
+  </section>
+  <section class="game-wrapper">
+    <details class="guide" id="guide"><summary id="guideSummary">كيف ألعب؟</summary><p id="guideFirst">اضغط على الطريق لتدويره ربع دورة. أوصل مسارًا مستمرًا من ⚡ إلى جميع المنازل ⌂.</p><p id="guideSecond">الأزرق المتوهج يعني أن الكهرباء وصلت. استخدم تلميحًا إذا تعثرت، أو زر التراجع لإلغاء الحركة الأخيرة.</p></details>
+    <div class="stats">
+      <div class="stat"><span id="levelLabel">المستوى</span><b id="levelNum">01 / 10</b></div>
+      <div class="stat"><span id="movesLabel">الحركات</span><b id="movesNum">0</b></div>
+      <div class="stat"><span id="homesLabel">منازل مضيئة</span><b id="homesNum">0 / 1</b></div>
+    </div>
+    <div class="board-frame">
+      <div class="board-topline"><span class="station"><i></i><span id="powerLabel">محطة الطاقة</span></span><span id="bestScore">أفضل نتيجة: —</span></div>
+      <div id="board" class="board" role="group" aria-label="لوحة اللعبة"></div>
+      <div id="status" class="status" role="status" aria-live="polite">ابدأ بتدوير قطع المسار.</div>
+    </div>
+    <div class="controls">
+      <button id="undo" class="action secondary">↩ <span id="undoLabel">تراجع</span></button>
+      <button id="hint" class="action primary">✧ <span id="hintLabel">تلميح</span></button>
+      <button id="restart" class="action secondary">↻ <span id="restartLabel">إعادة</span></button>
+    </div>
+    <p class="progress-note" id="progressNote">التقدم يُحفظ على هذا الجهاز.</p>
+    <div class="levelbar"><label id="selectLabel" for="levelSelect">اختر المستوى للتجربة</label><select id="levelSelect" aria-label="Select level"></select></div>
+  </section>
+  <footer><span id="footNote">نسخة تجريبية · بدون إعلانات أو تسجيل أو جمع بيانات</span><small>LIGHTSHIFT V0.2 · LOCAL FIRST</small></footer>
+</main>
+<div id="winOverlay" class="overlay" hidden>
+  <section class="victory" role="dialog" aria-modal="true" aria-labelledby="winTitle">
+    <div class="confetti" aria-hidden="true">✨</div>
+    <h2 id="winTitle">أضاءت المدينة!</h2>
+    <div id="starsEarned" class="rating" aria-label="Star score">★★★</div>
+    <p id="winDesc">رائع! لقد أوصلت الطاقة إلى جميع المنازل.</p>
+    <p id="winMoves" class="winmoves"></p>
+    <button id="next" class="action primary wide">المستوى التالي ←</button>
+    <button id="replay" class="action secondary wide">إعادة المرحلة</button>
+  </section>
+</div>
+<script type="module" src="game.js"></script>
+</body>
+</html>
