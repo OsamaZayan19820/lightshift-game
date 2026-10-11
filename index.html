@@ -27,14 +27,14 @@
   <section class="hero">
     <p id="eyebrow" class="eyebrow">لغز واحد. مدينة تستيقظ.</p>
     <h1 id="headline">أعِد النور إلى المدينة</h1>
-    <p id="subtitle" class="subtitle">المس طريقًا لتدويره. أوصل الطاقة إلى كل المنازل.</p>
+    <p id="subtitle" class="subtitle">المس طريقًا لتدويره. أضئ الشبكة كاملة دون أسلاك مفتوحة.</p>
   </section>
   <section class="game-wrapper">
     <details class="guide" id="guide"><summary id="guideSummary">كيف ألعب؟</summary><p id="guideFirst">اضغط على الطريق لتدويره ربع دورة. أوصل مسارًا مستمرًا من ⚡ إلى جميع المنازل ⌂.</p><p id="guideSecond">الأزرق المتوهج يعني أن الكهرباء وصلت. استخدم تلميحًا إذا تعثرت، أو زر التراجع لإلغاء الحركة الأخيرة.</p></details>
     <div class="stats">
       <div class="stat"><span id="levelLabel">المستوى</span><b id="levelNum">01 / 10</b></div>
       <div class="stat"><span id="movesLabel">الحركات</span><b id="movesNum">0</b></div>
-      <div class="stat"><span id="homesLabel">منازل مضيئة</span><b id="homesNum">0 / 1</b></div>
+      <div class="stat"><span id="homesLabel">شبكة متصلة</span><b id="homesNum">0 / 1</b></div>
     </div>
     <div class="board-frame">
       <div class="board-topline"><span class="station"><i></i><span id="powerLabel">محطة الطاقة</span></span><span id="bestScore">أفضل نتيجة: —</span></div>
@@ -47,9 +47,9 @@
       <button id="restart" class="action secondary">↻ <span id="restartLabel">إعادة</span></button>
     </div>
     <p class="progress-note" id="progressNote">التقدم يُحفظ على هذا الجهاز.</p>
-    <div class="levelbar"><label id="selectLabel" for="levelSelect">اختر المستوى للتجربة</label><select id="levelSelect" aria-label="Select level"></select></div>
+    <div class="levelbar"><label id="selectLabel" for="levelSelect">المراحل المفتوحة (بالتتابع)</label><select id="levelSelect" aria-label="Select level"></select></div>
   </section>
-  <footer><span id="footNote">نسخة تجريبية · بدون إعلانات أو تسجيل أو جمع بيانات</span><small>LIGHTSHIFT V0.2 · LOCAL FIRST</small></footer>
+  <footer><span id="footNote">نسخة تجريبية · بدون إعلانات أو تسجيل أو جمع بيانات</span><small>LIGHTSHIFT V0.3 · DIFFICULTY PILOT</small></footer>
 </main>
 <div id="winOverlay" class="overlay" hidden>
   <section class="victory" role="dialog" aria-modal="true" aria-labelledby="winTitle">
